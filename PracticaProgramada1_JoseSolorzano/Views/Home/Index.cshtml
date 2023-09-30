@@ -1,0 +1,82 @@
+﻿@model IEnumerable<PracticaProgramada1_JoseSolorzano.Models.Restaurant>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.nombre)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.dueño)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.provincia)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.cantón)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.distrito)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.dirección_exacta)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <div class="container">
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.nombre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.dueño)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.provincia)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.cantón)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.distrito)
+                    </td>
+                    <td>
+                            @Html.DisplayFor(modelItem => item.dirección_exacta)
+                    </td>
+@*                     <td>
+                        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                    </td> *@
+                </tr>
+            }
+        </tbody>
+    </div>
+    </table>
+    </div>
+</body>
+</html>
